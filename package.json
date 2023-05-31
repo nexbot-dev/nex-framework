@@ -6,8 +6,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "repository": "https://github.com/nexbot-dev/nexbot.git",
-  "author": "Aen Jojo <josuafernando999@gmail.com>",
-  "license": "GPL-3.0",
+  "author": "@nexbot-dev",
+  "license": "Apache-2.0",
   "packageManager": "yarn@3.5.1",
   "scripts": {
     "build": "rollup -c"
