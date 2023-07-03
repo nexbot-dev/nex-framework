@@ -3,23 +3,35 @@
   "version": "0.0.1",
   "description": "A discord bot framework by NexBotDev built on top of discord.js",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
   "repository": "https://github.com/nexbot-dev/nexbot.git",
   "author": "@nexbot-dev",
   "license": "Apache-2.0",
   "packageManager": "yarn@3.5.1",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "build": "rollup -c"
+    "build": "tsup",
+    "clean": "node scripts/clean-dist.js"
+  },
+  "imports": {
+    "#core/*": [
+      "./src/core/*"
+    ]
+  },
+  "exports": {
+    "require": "./dist/index.cjs",
+    "import": "./dist/index.js",
+    "types": "./dist/index.d.ts"
+  },
+  "engines": {
+    "node": ">=20.1.0",
+    "npm": ">=9.6.7"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^15.0.2",
-    "@rollup/plugin-terser": "^0.4.2",
-    "@rollup/plugin-typescript": "^11.1.1",
     "discord.js": "^14.11.0",
-    "rollup": "^3.22.0",
-    "rollup-plugin-dts": "^5.3.0",
-    "tslib": "^2.5.0",
+    "terser": "^5.18.2",
+    "tsup": "^7.1.0",
     "typescript": "^5.0.4"
   }
 }
