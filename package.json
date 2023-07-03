@@ -16,7 +16,10 @@
   },
   "imports": {
     "#core/*": [
-      "./src/core/*"
+      "./src/core/*.js"
+    ],
+    "#libs/*": [
+      "./src/libs/*.js"
     ]
   },
   "exports": {

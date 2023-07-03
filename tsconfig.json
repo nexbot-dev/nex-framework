@@ -4,7 +4,10 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "baseUrl": "./",
-    "paths": {},
+    "paths": {
+      "#core/*": ["./src/core/*"],
+      "#libs/*": ["./src/libs/*"]
+    },
     "declaration": true,
     "emitDeclarationOnly": true,
     "sourceMap": true,
