@@ -12,7 +12,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
-    "clean": "node scripts/clean-dist.js"
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "coverage": "vitest run --coverage"
   },
   "imports": {
     "#core/*": [
@@ -35,6 +37,7 @@
     "discord.js": "^14.11.0",
     "terser": "^5.18.2",
     "tsup": "^7.1.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "vitest": "^0.32.4"
   }
 }
