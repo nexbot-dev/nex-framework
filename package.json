@@ -1,7 +1,7 @@
 {
   "name": "@nexbot/nex-framework",
-  "version": "0.0.1",
-  "description": "A discord bot framework by NexBotDev built on top of discord.js",
+  "version": "1.0.0",
+  "description": "A discord bot framework by @nexbot-dev built on top of discord.js",
   "type": "module",
   "author": "@nexbot-dev",
   "license": "Apache-2.0",
