@@ -456,9 +456,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nexbot-dev/nex-framework@workspace:.":
+"@nexbot/nex-framework@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@nexbot-dev/nex-framework@workspace:."
+  resolution: "@nexbot/nex-framework@workspace:."
   dependencies:
     discord.js: ^14.11.0
     terser: ^5.18.2

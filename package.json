@@ -1,9 +1,8 @@
 {
-  "name": "@nexbot-dev/nex-framework",
+  "name": "@nexbot/nex-framework",
   "version": "0.0.1",
   "description": "A discord bot framework by NexBotDev built on top of discord.js",
   "type": "module",
-  "repository": "https://github.com/nexbot-dev/nexbot.git",
   "author": "@nexbot-dev",
   "license": "Apache-2.0",
   "packageManager": "yarn@3.5.1",
@@ -39,5 +38,28 @@
     "tsup": "^7.1.0",
     "typescript": "^5.0.4",
     "vitest": "^0.32.4"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "nexbot-dev",
+    "nexbot",
+    "discord.js",
+    "discord",
+    "bot",
+    "ts",
+    "typescript"
+  ],
+  "homepage": "https://github.com/nexbot-dev/nexbot",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nexbot-dev/nexbot.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nexbot-dev/nexbot/issues"
+  },
+  "files": [
+    "dist/"
+  ]
 }
