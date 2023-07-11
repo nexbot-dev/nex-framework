@@ -1,0 +1,11 @@
+# modules
+node_modules
+
+# output directory
+dist
+coverage
+
+# environment config
+.yarn
+.vscode
+.github
