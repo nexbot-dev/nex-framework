@@ -5,11 +5,11 @@ export interface EventOptions {
 	readonly once?: boolean;
 }
 
-export class Event {
-	public readonly client: NexClient;
+export class Event<T extends NexClient> {
+	public readonly client: T;
 	public readonly metadata: EventOptions;
 
-	public constructor(client: NexClient, { name, once }: EventOptions) {
+	public constructor(client: T, { name, once }: EventOptions) {
 		this.client = client;
 		this.metadata = {
 			name: name,

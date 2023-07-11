@@ -4,7 +4,7 @@ import type { Command } from '#core/Command';
 
 export class NexClient extends Client {
 	public readonly registry: Registry;
-	public readonly commands: Collection<string, Command>;
+	public readonly commands: Collection<string, Command<NexClient>>;
 
 	public constructor(options: ClientOptions) {
 		super(options);

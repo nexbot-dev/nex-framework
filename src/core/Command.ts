@@ -1,10 +1,10 @@
 import type { SlashCommandBuilder, CommandInteraction } from 'discord.js';
 import type { NexClient } from '../NexClient';
 
-export class Command {
-	public readonly client: NexClient;
+export class Command<T extends NexClient> {
+	public readonly client: T;
 
-	public constructor(client: NexClient) {
+	public constructor(client: T) {
 		this.client = client;
 
 		return this;

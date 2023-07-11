@@ -17,7 +17,7 @@ export class Registry {
 	private async registerEvent(fileName: string, directoryPath: string) {
 		const filePath = this.createImportUrl(directoryPath, fileName).href;
 		const { AppEvent } = await import(filePath);
-		const event: Event = new AppEvent(this.client);
+		const event: Event<NexClient> = new AppEvent(this.client);
 
 		if (event.metadata.once) {
 			this.client.once(event.metadata.name, (...args) => event.execute?.(...args));
@@ -43,7 +43,7 @@ export class Registry {
 	private async registerCommand(fileName: string, directoryPath: string) {
 		const filePath = this.createImportUrl(directoryPath, fileName).href;
 		const { AppCommand } = await import(filePath);
-		const command: Command = new AppCommand(this.client);
+		const command: Command<NexClient> = new AppCommand(this.client);
 
 		if (command.buildAppCommand?.() === undefined) {
 			return;
