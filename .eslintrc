@@ -1,5 +1,6 @@
 {
 	"extends": [
-		"@nexbot"
+		"@nexbot",
+		"prettier"
 	]
 }
