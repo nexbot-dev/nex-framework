@@ -15,7 +15,10 @@
     "test:watch": "vitest",
     "coverage": "vitest run --coverage",
     "lint": "eslint --ext .js,.ts --fix src tests",
-    "format": "prettier --write \"{src,tests}/**/*.ts\""
+    "format": "prettier --write \"{src,tests}/**/*.ts\"",
+    "postinstall": "husky install",
+    "prepack": "pinst --disable",
+    "postpack": "pinst --enable"
   },
   "imports": {
     "#core/*": [
@@ -40,6 +43,9 @@
     "discord.js": "^14.11.0",
     "eslint": "^8.44.0",
     "eslint-config-prettier": "^8.8.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.2.3",
+    "pinst": "^3.0.0",
     "prettier": "^3.0.0",
     "terser": "^5.18.2",
     "tsup": "^7.1.0",
@@ -68,5 +74,11 @@
   },
   "files": [
     "dist/"
-  ]
+  ],
+  "lint-staged": {
+    "*.{js,ts}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  }
 }
